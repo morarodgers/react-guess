@@ -1,6 +1,7 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import NumberGuessingGame from "./NumberGuessingGame";
 import "./App.css";
+import "./styles.css";
 
 class App extends Component {
   render() {
