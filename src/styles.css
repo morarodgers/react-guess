@@ -30,14 +30,95 @@ p {
   color: var(--brown-dark);
 }
 
-button {
-  background-color: var(--brown);
-  color: white;
-  border: 2px solid var(--brown-darker);
+/* Correct Guess Animation */
+@keyframes correctGuess {
+  0% {
+    background-color: var(--brown-light);
+    transform: scale(1);
+  }
+  50% {
+    background-color: var(--brown-medium);
+    transform: scale(1.1);
+  }
+  100% {
+    background-color: var(--brown);
+    transform: scale(1);
+  }
+}
+
+.correct {
+  animation: correctGuess 0.5s ease;
+}
+
+/* Incorrect Guess Animation */
+@keyframes incorrectGuess {
+  0% {
+    background-color: var(--brown-darker);
+    transform: scale(1);
+  }
+  50% {
+    background-color: red;
+    transform: scale(0.9);
+  }
+  100% {
+    background-color: var(--brown-darker);
+    transform: scale(1);
+  }
+}
+
+.incorrect {
+  animation: incorrectGuess 0.5s ease;
 }
 
 button:hover {
   background-color: var(--brown-darker);
+}
+
+.game-over {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Animation for winning */
+@keyframes winAnimation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.game-over.win .game-over-message {
+  color: green;
+  animation: winAnimation 1s ease-out;
+}
+
+/* Animation for losing */
+@keyframes loseAnimation {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-10px);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  75% {
+    transform: translateX(-10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.game-over.lose .game-over-message {
+  color: red;
+  animation: loseAnimation 0.5s ease-out;
 }
 
 footer {
