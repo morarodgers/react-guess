@@ -1,0 +1,48 @@
+:root {
+  --brown-lightest: #f5e8da;
+  --brown-lighter: #e6ccb3;
+  --brown-light: #d9b28d;
+  --brown: #cc9966;
+  --brown-medium: #b3774d;
+  --brown-dark: #996633;
+  --brown-darker: #804d26;
+  --brown-darkest: #66331a;
+}
+
+body {
+  background-color: var(--brown-lightest);
+  color: var(--brown-darkest);
+}
+
+h1 {
+  color: var(--brown-medium);
+}
+
+h2 {
+  font-family: "Great Vibes", cursive;
+  color: var(--brown-medium);
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Optional effect */
+}
+
+p {
+  color: var(--brown-dark);
+}
+
+button {
+  background-color: var(--brown);
+  color: white;
+  border: 2px solid var(--brown-darker);
+}
+
+button:hover {
+  background-color: var(--brown-darker);
+}
+
+footer {
+  background-color: var(--brown-darkest);
+  color: var(--brown-lightest);
+  padding: 20px;
+  text-align: center;
+}
