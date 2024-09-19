@@ -14,7 +14,6 @@ const NumberGuessingGame = () => {
   const [latestGuess, setLatestGuess] = useState(null);
   const [numberToGuess, setNumberToGuess] = useState(getRandomNumber);
   const [numberOfGuesses, setNumberOfGuesses] = useState(0);
-  //const [hasWon, setHasWon] = useState(false);
 
   const handleGuess = (guess) => {
     setLatestGuess(Number(guess));
@@ -25,7 +24,6 @@ const NumberGuessingGame = () => {
     setNumberToGuess(getRandomNumber);
     setNumberOfGuesses(0);
     setLatestGuess(null);
-    /* setHasWon(false); */
   };
 
   const isCorrectGuess = latestGuess === numberToGuess;
